@@ -1,0 +1,172 @@
+body {
+  font-family: Lato, Tahoma, Arial, sans-serif;
+}
+
+hr {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+p {
+  margin-top: 1vh;
+  margin-bottom: 3vh;
+}
+
+h1 > a:-webkit-any-link {
+  color: black;
+  text-decoration: none;
+}
+
+h1 > a {
+  color: black;
+}
+
+.row > div > i {
+  color: grey;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-style: italic;
+  color: grey;
+}
+
+.content {
+  margin: 3vh 10vh 0 10vh;
+  text-align: center;
+}
+
+.subnav {
+  font-size: 1.55em;
+  margin-bottom: 2.35em;
+}
+
+.question {
+  text-align: left;
+  font-size: 2.75vh;
+  margin-bottom: 1.65vh;
+  text-align: center;
+}
+
+.index-content {
+  text-align: justify;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.experiences {
+  text-align: justify;
+  width: 67%;
+  margin: 5vh auto 0 auto;
+}
+
+.experiences > li {
+  margin-bottom: 4vh;
+}
+
+.mail {
+  font-size: 2.5vh;
+}
+
+.thanks {
+  margin-bottom: 5vh;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-style: italic;
+  color: grey;
+}
+
+.fa-times {
+  color: crimson;
+}
+
+.fa-wordpress {
+  color: darkred;
+}
+
+.fa-check,
+.fa-code {
+  color: green;
+}
+
+.fa-users {
+  color: grey;
+}
+
+.fa-flask {
+  color: darkblue;
+}
+
+.fa-database {
+  color: darkgoldenrod;
+}
+
+.fa-university {
+  margin-bottom: 2vh;
+}
+
+.fa-graduation-cap {
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+@media screen and (max-width: 640px) {
+  h1 > a {
+    font-size: 2rem;
+  }
+  li > a {
+    font-size: 1rem;
+  }
+  .content {
+    width: 85%;
+    margin: auto;
+    padding-top: 1.5rem;
+  }
+  .subnav {
+    margin-top: 12%;
+    margin-bottom: 25%;
+    font-size: 2rem;
+  }
+  .question {
+    font-size: 1.55rem;
+  }
+  .index-content {
+    width: auto;
+  }
+  .footer {
+    position: fixed;
+    font-size: 0.75rem;
+  }
+  .experiences {
+    width: 85%;
+    font-size: 0.65rem;
+  }
+
+  .thanks {
+    margin-bottom: 1.25rem;
+    font-size: 0.75rem;
+    height: 5%;
+  }
+
+  .card-deck {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+  }
+}
