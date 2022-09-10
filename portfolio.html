@@ -5,150 +5,295 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="favicon.ico" /><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
-    <link
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Thomas Barré-Pitous</title>
   </head>
   <body>
-    <!-- title -->
-    <div class="row mt-5">
-      <div class="col my-auto"><hr /></div>
-      <div class="col-auto">
-        <h1 class="display-4"><a href="index.html">Thomas Barré-Pitous</a></h1>
+    <div class="content-container">
+      <div class="row mt-5">
+        <div class="col my-auto"><hr /></div>
+        <div class="col-auto">
+          <h1 class="display-4"><a href="index.html">Thomas Barré-Pitous</a></h1>
+        </div>
+        <div class="col my-auto"><hr /></div>
       </div>
-      <div class="col my-auto"><hr /></div>
-    </div>
-    <!-- navbar -->
-    <div class="row mt-2">
-      <ul class="list-inline justify-content-center mx-auto">
-        <li class="list-inline-item">
-          <a href="education.html">Education</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="experience.html">Experiences</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="portfolio.html">Portfolio</a>
-        </li>
-        <li class="list-inline-item">
-          <a href="contact.html">Contact</a>
-        </li>
-      </ul>
-    </div>
-    <!-- content -->
-    <div class="row justify-content-center content">
-      <div class="card-deck">
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Djikstra Shortest Path</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Algorithm</h6>
-            <p class="card-text">
-              Dijkstra shortest path solving with Python 3.8.1 / NetworkX &
-              Matplotlib for the graph visualization.
-            </p>
+      <!-- navbar -->
+      <div class="row mt-2">
+        <ul class="list-inline justify-content-center mx-auto">
+          <li class="list-inline-item">
+            <a href="education.html">Education</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="experience.html">Experiences</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="portfolio.html">Portfolio</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- content -->
+      <div class="row justify-content-center content">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">LNR_API</h5>
+              <h6 class="card-subtitle mb-2 text-muted">API</h6>
+              <p class="card-text">
+                A REST API built with Django Rest Framework (DRF) linked to a PostgreSQL database containing 
+                all players listed in lnr.fr (French National Rugby League) part of a team in the past 2 years
+                (both Top14 & ProD2).
+              </p>
+            </div>
+            <div class="card-footer text-muted">
+              <a
+                href="https://apirugbyplayersscrap-production.up.railway.app/api/players/" rel="noopener noreferrer" target="_blank"
+                class="card-link"
+                >Access API</a
+              >
+              <a
+                href="#" rel="noopener noreferrer" target="_blank"
+                class="card-link"
+                data-toggle="modal" data-target="#lnrAPI"
+                >Architecture</a
+              >
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="lnrAPI" tabindex="-1" role="dialog" aria-labelledby="lnrAPITitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Architecture</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="architecture_picture rounded img-fluid"
+                    src="/images/LNR_API.svg"
+                    alt="LNR_Scraping architecture"
+                    >
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card-footer text-muted">
-            <a
-              href="https://github.com/thomasbarrepitous/Dijkstra_Example" rel="noopener noreferrer" target="_blank"
-              class="card-link"
-              >GitHub</a
-            >
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Rugby Players Dashboard</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Application</h6>
+              <p class="card-text">
+                Dashboard with multiple chart portraying the data from the French National Rugby League.
+                Built in Python with Dash, Plotly & Numpy.
+              </p>
+            </div>
+            <div class="card-footer text-muted">
+              <a
+                href="#" rel="noopener noreferrer" target="_blank"
+                class="card-link disabled"
+                >Access App</a
+              >
+              <a
+                href="#" rel="noopener noreferrer" target="_blank"
+                class="card-link"
+                data-toggle="modal" data-target="#lnrApp"
+                >Architecture</a
+              >
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="lnrApp" tabindex="-1" role="dialog" aria-labelledby="lnrAppTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Architecture</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="architecture_picture rounded img-fluid"
+                    src="/images/LNR_Dash.svg"
+                    alt="LNR_Scraping architecture"
+                    >
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Genetic Algorithm</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Algorithm</h6>
-            <p class="card-text">
-              VRP and TSP generator and solver using genetic algorithms, written
-              in Python.
-            </p>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">LNR_Scraping</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Script</h6>
+              <p class="card-text">
+                Script written in Python using <a rel="noopener noreferrer" target="_blank" href="https://requests.readthedocs.io/projects/requests-html/en/latest/">Requests-HTML</a> scraping 
+                various players from a specified year / league of the French National Rugby League (Top 14/ProD2). 
+              </p>
+            </div>
+            <div class="card-footer text-muted">
+              <a
+                href="#" rel="noopener noreferrer" target="_blank"
+                class="card-link disabled"
+                >Access App</a
+              >
+              <a
+                href="#" rel="noopener noreferrer" target="_blank"
+                class="card-link"
+                data-toggle="modal" data-target="#lnrScrap"
+                >Architecture</a
+              >
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="lnrScrap" tabindex="-1" role="dialog" aria-labelledby="lnrScrapTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="lnrScrapTitle">Architecture</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <img class="architecture_picture rounded img-fluid"
+                    src="/images/LNR_Scrap.svg"
+                    alt="LNR_Scraping architecture"
+                    >
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card-footer text-muted">
-            <a
-              href="https://github.com/thomasbarrepitous/TSP-VRP-Genetic-Solving" rel="noopener noreferrer" target="_blank"
-              class="card-link"
-              >GitHub</a
-            >
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">RESTful API with PHP</h5>
-            <h6 class="card-subtitle mb-2 text-muted">API</h6>
-            <p class="card-text">
-              A short example of a REST API in PHP using a MySQL database and
-              phpmyadmin.
-            </p>
-          </div>
-          <div class="card-footer text-muted">
-            <a
-              href="https://github.com/thomasbarrepitous/PHP_REST" rel="noopener noreferrer" target="_blank"
-              class="card-link"
-              >GitHub</a
-            >
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">KeepItSimpleStupide</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Website</h6>
-            <p class="card-text">
-              This is the website you are looking at. I got the idea of a very
-              minimalist website for my portfolio and here we are.
-            </p>
-          </div>
-          <div class="card-footer text-muted">
-            <a
-              href="https://github.com/thomasbarrepitous/keepitstupidsimple" rel="noopener noreferrer" target="_blank"
-              class="card-link"
-              >GitHub</a
-            >
-          </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-          <div class="card-body">
-            <h5 class="card-title">Honkiji.fr</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Website</h6>
-            <p class="card-text">
-              Website using web scraping (BS4) with Flask, Firebase and Angular to look for french articles about the Japanese culture and other related news. 
-            </p>
-          </div>
-          <div class="card-footer text-muted">
-            <a
-              href="https://www.honkiji.fr" rel="noopener noreferrer" target="_blank"
-              class="card-link"
-              >Link</a
-            >
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">CassavaLeafDiseaseAttempt</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Deep Learning</h6>
+              <p class="card-text">
+                Classify each cassava image from the dataset into four disease categories or a fifth category indicating a healthy leaf.
+                Via Deep Learning (Keras) using a Convolutional Neural Networks with EfficientNet. 
+              </p>
+            </div>
+            <div class="card-footer text-muted">
+              <a
+                href="https://github.com/thomasbarrepitous/CassavaLeafDiseaseAttempt" rel="noopener noreferrer" target="_blank"
+                class="card-link"
+                >GitHub</a
+              >
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- footer -->
-    <footer class="footer">
-      <p><i class="fa fa-globe"> </i> Bordeaux, Nouvelle-Aquitaine - France</p>
-    </footer>
-    <!-- scripts -->
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
+      <div class="row justify-content-center content">
+        <div class="card-deck">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">MNISTWithSVM</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Machine Learning</h6>
+              <p class="card-text">
+                From an input image, predict which digit is represented. Trained with the "Mixed National Institute of Standards and Technology" (MNIST) dataset problem using Support Vector Machine with Scikit-learn.
+              </p>
+            </div>
+            <div class="card-footer text-muted">
+              <a
+              href="https://github.com/thomasbarrepitous/MNISTWithSVM" rel="noopener noreferrer" target="_blank"
+              class="card-link"
+              >GitHub</a
+              >
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    ...
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Djikstra Shortest Path</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Algorithm</h6>
+              <p class="card-text">
+                Dijkstra shortest path solving with Python 3.8.1 / NetworkX &
+                Matplotlib for the graph visualization.
+              </p>
+            </div>
+            <div class="card-footer text-muted">
+              <a
+                href="https://github.com/thomasbarrepitous/Dijkstra_Example" rel="noopener noreferrer" target="_blank"
+                class="card-link"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Genetic Algorithm</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Algorithm</h6>
+              <p class="card-text">
+                VRP and TSP generator and solver using genetic algorithms, written
+                in Python.
+              </p>
+            </div>
+            <div class="card-footer text-muted">
+              <a
+                href="https://github.com/thomasbarrepitous/TSP-VRP-Genetic-Solving" rel="noopener noreferrer" target="_blank"
+                class="card-link"
+                >GitHub</a
+              >
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">KeepItStupidSimple</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Application</h6>
+              <p class="card-text">
+                This is the website you are looking at. I got the idea of a very
+                minimalist website for my portfolio and here we are.
+              </p>
+            </div>
+            <div class="card-footer text-muted">
+              <a
+                href="https://github.com/thomasbarrepitous/keepitstupidsimple" rel="noopener noreferrer" target="_blank"
+                class="card-link"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      <footer>
+        <p><i class="fa fa-globe"> </i> Toulouse, Occitanie - France</p>
+      </footer>
   </body>
 </html>
