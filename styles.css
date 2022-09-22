@@ -1,11 +1,17 @@
 body {
   font-family: Lato, Tahoma, Arial, sans-serif;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 footer {
   display: flex;
   justify-content: center;
   padding: 5px;
+}
+
+div::-webkit-scrollbar {
+  display: none;
 }
 
 .content-container{
